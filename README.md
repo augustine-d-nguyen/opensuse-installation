@@ -56,5 +56,9 @@ sudo zypper install telegram-desktop
 
 sudo zypper install discord
 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+sh -c "$(curl -sSfL https://release.solana.com/v1.9.2/install)"
+
 ```
 
