@@ -23,3 +23,18 @@ sudo zypper refresh
 sudo zypper install microsoft-edge-stable
 
 sudo zypper install code
+
+(cd ~/Downloads && curl -o jdk.rpm https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.rpm)
+
+sudo rpm -ivh ~/Downloads/jdk.rpm
+
+sles_version="$(. /etc/os-release && echo "${VERSION_ID##*.}")"
+
+opensuse_repo="https://download.opensuse.org/repositories/security:SELinux/SLE_15_SP$sles_version/security:SELinux.repo"
+
+sudo zypper addrepo $opensuse_repo
+
+sudo zypper remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine runc
+
+sudo zypper addrepo https://download.docker.com/linux/sles/docker-ce.repo
+
