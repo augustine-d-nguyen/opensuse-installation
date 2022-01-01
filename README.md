@@ -1,3 +1,2 @@
-Things to do after installing
-1. Update system
+Things to do after installing:
 sudo zypper ref && sudo zypper up
