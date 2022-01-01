@@ -1,5 +1,5 @@
 Things to do after installing:
-
+```
 sudo zypper ref && sudo zypper up
 
 sudo zypper remove libreoffice*
@@ -37,4 +37,24 @@ sudo zypper addrepo $opensuse_repo
 sudo zypper remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine runc
 
 sudo zypper addrepo https://download.docker.com/linux/sles/docker-ce.repo
+
+sudo zypper install docker-ce docker-ce-cli containerd.io
+
+sudo systemctl start docker
+
+sudo docker run hello-world
+
+sudo groupadd docker
+
+sudo usermod -aG docker $USER
+
+newgrp docker
+
+docker run hello-world
+
+sudo zypper install telegram-desktop
+
+sudo zypper install discord
+
+```
 
